@@ -7,11 +7,7 @@ namespace Secure.Core.Prettifier
 
         public override bool ShouldHandleRequest(double numberToPrettify)
         {
-            // 1000000          = million
-            // 1000000000       = billion
-            // 1000000000000    = trillion
-            // 1000000000000000 = quadrillion
-            return numberToPrettify >= 1000000000000000D;
+            return numberToPrettify >= Number.Quadrillion;
         }
 
         public override string HandleRequest(double numberToPrettify)
